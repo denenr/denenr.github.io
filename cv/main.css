@@ -57,10 +57,10 @@ body {
 
   header { grid-area: header }
   footer { grid-area: footer }
-  .xp { grid-area: xp }
-  .edu { grid-area: edu }
-  .lang { grid-area: lang }
-  .ref { grid-area: ref }
+  #xp { grid-area: xp }
+  #edu { grid-area: edu }
+  #lang { grid-area: lang }
+  #ref { grid-area: ref }
 }
 
 footer {
@@ -113,28 +113,26 @@ footer {
 
 
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
+article > ul li {
   padding: 0.5em 0;
 }
-  li:not(:last-child) {
+  article > ul li:not(:last-child) {
     border-bottom: 1px solid black;
   }
 
-.xp .role, .edu .role {
+#xp .role,
+#edu .role {
   font-weight: bold;
 }
 
-.xp .date::after, .edu .date::after {
+#xp .date:not(:last-child)::after,
+#edu .date:not(:last-child)::after {
   content: '\a';
   white-space: pre;
 }
 
-.xp .employer::after, .edu .school::after {
+#xp .employer:not(:last-child)::after,
+#edu .school:not(:last-child)::after {
   content: ', ';
 }
 
@@ -142,14 +140,6 @@ li {
 
 
 
-.lang .fluency {
-  font-style: italic;
-}
-
-.lang .fluency::before {
-  content: '('
-}
-
-.lang .fluency::after {
-  content: ')'
-}
+#lang .fluency { font-style: italic }
+#lang .fluency::before { content: '(' }
+#lang .fluency::after { content: ')' }
