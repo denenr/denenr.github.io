@@ -18,7 +18,7 @@ header {
   text-align: center;
 }
 
-article {
+section {
   margin-bottom: 1em;
 }
 
@@ -30,7 +30,7 @@ article {
 }
 
 @media (min-width: 768px) {
-  article {
+  section {
     padding: 0 1.5em;
   }
 
@@ -109,10 +109,10 @@ footer {
 
 
 
-article > ul li {
+section > ul li {
   padding: 0.5em 0;
 }
-  article > ul li:not(:last-child) {
+  section > ul li:not(:last-child) {
     border-bottom: 1px solid black;
   }
 
