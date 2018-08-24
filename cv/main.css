@@ -44,6 +44,7 @@ article {
       'xp edu'
       'xp lang'
       'xp ref'
+      'techs techs'
       'footer footer';
   }
 
@@ -58,6 +59,7 @@ article {
   #edu { grid-area: edu }
   #lang { grid-area: lang }
   #ref { grid-area: ref }
+  #techs { grid-area: techs }
 }
 
 footer {
@@ -137,3 +139,23 @@ article > ul li {
 #lang .fluency { font-style: italic }
 #lang .fluency::before { content: '(' }
 #lang .fluency::after { content: ')' }
+
+
+
+
+
+#techs ul li { border: none }
+#techs ul ul { display: inline }
+#techs ul ul::before { content: '(' }
+#techs ul ul::after { content: ')' }
+
+#techs ul ul li { display: inline }
+#techs ul ul li + li::before { content: ' | ' }
+
+#techs > ul > li {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: #FFF8;
+  border-radius: 0.5em;
+}
